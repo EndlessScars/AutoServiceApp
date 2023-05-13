@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AutoService/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/AutoService/app/src/main/res/layout/fragment_add_notification.xml" value="0.3609375" />
+        <entry key="..\:/AutoService/app/src/main/res/layout/fragment_add_order.xml" value="0.3609375" />
+        <entry key="..\:/AutoService/app/src/main/res/layout/fragment_add_service.xml" value="0.33" />
+        <entry key="..\:/AutoService/app/src/main/res/layout/fragment_admin.xml" value="0.3609375" />
+        <entry key="..\:/AutoService/app/src/main/res/layout/fragment_admin_create_order.xml" value="0.3609375" />
+        <entry key="..\:/AutoService/app/src/main/res/layout/fragment_authorization.xml" value="0.25" />
+        <entry key="..\:/AutoService/app/src/main/res/layout/fragment_client.xml" value="0.3609375" />
+        <entry key="..\:/AutoService/app/src/main/res/layout/fragment_master.xml" value="0.3609375" />
+        <entry key="..\:/AutoService/app/src/main/res/layout/fragment_order_list.xml" value="0.3609375" />
+        <entry key="..\:/AutoService/app/src/main/res/layout/fragment_registration.xml" value="0.25" />
+        <entry key="..\:/AutoService/app/src/main/res/layout/order_item.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

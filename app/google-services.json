@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "951944544368",
+    "firebase_url": "https://autoservice-83fba-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "autoservice-83fba",
+    "storage_bucket": "autoservice-83fba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:951944544368:android:5535b9d8181163a2b774b5",
+        "android_client_info": {
+          "package_name": "com.android.autoservice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "951944544368-d9tieft0nth7km8rjjb96669eepeca1g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATVl-ZNe1uui9JK92WuEOl9ykBlT2TYlI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "951944544368-d9tieft0nth7km8rjjb96669eepeca1g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
