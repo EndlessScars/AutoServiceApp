@@ -24,7 +24,7 @@ class UserRepositoryImpl @Inject constructor(private val firebaseDatabase: Fireb
 
     @OptIn(ExperimentalCoroutinesApi::class)
     override suspend fun getUser(login: String): User = suspendCancellableCoroutine { continuation ->
-        fireBaseRef.child("login").get().addOnSuccessListener { dataSnapshot ->
+        fireBaseRef.child("User").child(login).get().addOnSuccessListener { dataSnapshot ->
             val user: User = mapper.mapUserDBToUser(dataSnapshot)
             continuation.resume(user, null)
         }.addOnFailureListener { exception ->
