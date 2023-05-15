@@ -5,7 +5,7 @@ import com.android.autoservice.domain.repository.NotificationRepository
 import javax.inject.Inject
 
 class GetNotificationListUseCase @Inject constructor(private val repository: NotificationRepository) {
-    private suspend fun execute(): List<Notification>{
+    suspend fun execute(): List<Notification>{
         return repository.getNotificationList()
     }
 }

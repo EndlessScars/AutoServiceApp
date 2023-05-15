@@ -7,7 +7,7 @@ import javax.inject.Inject
 class CreateOrderUseCase @Inject constructor(
     private val repository: OrderRepository
 ) {
-    private suspend fun execute(order: Order) {
+     suspend fun execute(order: Order) {
         repository.createOrder(order)
     }
 }

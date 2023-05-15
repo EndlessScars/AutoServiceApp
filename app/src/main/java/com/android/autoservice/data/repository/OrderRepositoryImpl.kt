@@ -15,10 +15,6 @@ class OrderRepositoryImpl @Inject constructor(private val firebaseDatabase: Fire
         TODO("Not yet implemented")
     }
 
-    override suspend fun getOrder(): Order {
-        TODO("Not yet implemented")
-    }
-
     override suspend fun createOrder(order: Order) {
         TODO("Not yet implemented")
     }

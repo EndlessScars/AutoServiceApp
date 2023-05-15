@@ -5,7 +5,7 @@ import com.android.domain.repository.OrderRepository
 import javax.inject.Inject
 
 class GetOrderListUseCase @Inject constructor(private val repository: OrderRepository) {
-    private suspend fun execute(): List<Order> {
+    suspend fun execute(): List<Order> {
         return repository.getOrderList()
     }
 }

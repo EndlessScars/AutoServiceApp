@@ -12,6 +12,6 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
     app:navGraph="@navigation/nav_graph"
-    tools:context=".MainActivity">
+    tools:context=".presentation.MainActivity">
 
 </androidx.fragment.app.FragmentContainerView>

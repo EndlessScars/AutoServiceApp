@@ -10,7 +10,8 @@ import dagger.hilt.components.SingletonComponent
 
 @Module
 @InstallIn(SingletonComponent::class)
-class RepositoryModule {
+class OrderRepositoryModule {
+
     @Provides
     fun provideOrderRepository(firebaseDatabase: FirebaseDatabase): OrderRepository {
         return OrderRepositoryImpl(firebaseDatabase)
