@@ -50,15 +50,6 @@ class AuthorizationFragment : Fragment() {
                             .navigate(R.id.action_authorizationFragment_to_clientFragment)
                     }
             }
-//            fireBaseRef.child(login).get().addOnSuccessListener {
-//                if (it.child("password").value.toString() == md5Transfer(password)) {
-//                    view.findNavController()
-//                        .navigate(R.id.action_authorizationFragment_to_clientFragment)
-//                }
-//            }.addOnFailureListener {
-//                Log.e("firebase", "Error getting data", it)
-//            }
-
         }
 
         viewBinding.btnRegistration.setOnClickListener() {

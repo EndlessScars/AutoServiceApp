@@ -7,7 +7,8 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import kotlinx.coroutines.*
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.suspendCancellableCoroutine
 import javax.inject.Inject
 import kotlin.coroutines.resumeWithException
 
@@ -18,38 +19,69 @@ class UserRepositoryImpl @Inject constructor(private val firebaseDatabase: Fireb
     private val fireBaseRef = firebaseDatabase.getReference(userKey)
     private val mapper = UserMapper()
 
-    override suspend fun createUser(login: String, user: User,) {
+    override suspend fun createUser(login: String, user: User) {
         fireBaseRef.child(login).setValue(user)
     }
 
-    override suspend fun getUser(login: String): User {
+    override suspend fun getUser(login: String): User{
+        var user: User = User(" ","", "")
+
+        fireBaseRef.child(login).get().addOnSuccessListener {
+            user = mapper.mapUserDBToUser(it)
+        }.addOnFailureListener{
+            throw it
+        }
+        return user
+    }
+
+//    @OptIn(ExperimentalCoroutinesApi::class)
+//    override suspend fun getUser(login: String): User {
+//        return suspendCancellableCoroutine { continuation ->
+//            val userRef = fireBaseRef.child(login)
+//
+//            val valueEventListener = object : ValueEventListener {
+//                override fun onDataChange(snapshot: DataSnapshot) {
+//                    val user = mapper.mapUserDBToUser(snapshot)
+//                    continuation.resume(user, null)
+//                }
+//
+//                override fun onCancelled(error: DatabaseError) {
+//                    continuation.resumeWithException(error.toException())
+//                }
+//            }
+//
+//            userRef.addListenerForSingleValueEvent(valueEventListener)
+//
+//            continuation.invokeOnCancellation {
+//                userRef.removeEventListener(valueEventListener)
+//            }
+//        }
+//    }
+
+    @OptIn(ExperimentalCoroutinesApi::class)
+    override suspend fun getUserList(): List<User> {
         return suspendCancellableCoroutine { continuation ->
-            val userRef = fireBaseRef.child(login)
-            userRef.addListenerForSingleValueEvent(object : ValueEventListener {
-                override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    if (dataSnapshot.exists()) {
-                        val user = dataSnapshot.getValue(User::class.java)
-                        if (user != null) {
-                            continuation.resume(user, null)
-                        } else {
-                            continuation.resumeWithException(Exception("Failed to parse user data"))
-                        }
-                    } else {
-                        continuation.resumeWithException(Exception("User not found"))
+
+            val valueEventListener = object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    val userList = mutableListOf<User>()
+                    for (childSnapshot in snapshot.children) {
+                        val user = mapper.mapUserDBToUser(snapshot)
+                        userList.add(user)
                     }
+                    continuation.resume(userList, null)
                 }
 
-                override fun onCancelled(databaseError: DatabaseError) {
-                    continuation.resumeWithException(databaseError.toException())
+                override fun onCancelled(error: DatabaseError) {
+                    continuation.resumeWithException(error.toException())
                 }
-            })
+            }
+
+            fireBaseRef.addListenerForSingleValueEvent(valueEventListener)
+
+            continuation.invokeOnCancellation {
+                fireBaseRef.removeEventListener(valueEventListener)
+            }
         }
     }
-
-
-
-    override suspend fun getUserList(): List<User> {
-        TODO("Not yet implemented")
-    }
 }
-

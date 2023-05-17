@@ -5,6 +5,7 @@ import com.google.firebase.database.DataSnapshot
 
 class UserMapper {
 
+
     fun mapUserDBToUser(dataSnapshot: DataSnapshot): User {
         return User(
             name = dataSnapshot.child("name").value.toString(),
