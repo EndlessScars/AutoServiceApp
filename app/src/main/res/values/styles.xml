@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Базовый стиль приложения -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryDark">@color/primary_dark_color</item>
+        <item name="colorAccent">@color/accent_color</item>
+        <item name="android:windowBackground">@color/background_color</item>
+        <item name="android:textColorPrimary">@color/text_color_primary</item>
+        <item name="android:textColorSecondary">@color/text_color_secondary</item>
+        <item name="android:textColorHint">@color/text_color_hint</item>
+        <!-- Другие настройки стиля -->
+    </style>
+
+    <!-- Стиль для заголовков -->
+    <style name="HeadingStyle" parent="TextAppearance.AppCompat.Headline">
+        <item name="android:textColor">@color/heading_color</item>
+        <item name="android:textSize">24sp</item>
+        <!-- Другие настройки для заголовков -->
+    </style>
+
+    <!-- Стиль для кнопок -->
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_rounded_background</item>
+        <item name="android:textColor">@color/button_text_color</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+        <!-- Другие настройки для кнопок -->
+    </style>
+
+    <!-- Стиль для текстовых полей -->
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name = "android:padding">10dp</item>
+
+        <item name="android:background">@drawable/edit_text_style</item>
+        <item name="android:textColor">@color/edittext_text_color</item>
+        <item name="android:textSize">14sp</item>
+        <!-- Другие настройки для текстовых полей -->
+    </style>
+</resources>
