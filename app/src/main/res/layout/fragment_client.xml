@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.fragments.ClientFragment">
+    tools:context=".presentation.fragments.client_fragments.ClientFragment">
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button"
+        android:id="@+id/btn_client_services_list"
+        style="@style/ButtonStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="112dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="112dp"
         android:text="Просмотр услуг"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,7 +20,8 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button2"
+        style="@style/ButtonStyle"
+        android:id="@+id/btn_client_create_order"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="112dp"
@@ -28,10 +30,11 @@
         android:text="Создать заказ"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_client_services_list" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button3"
+        style="@style/ButtonStyle"
+        android:id="@+id/btn_client_current_orders"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="112dp"
@@ -40,10 +43,11 @@
         android:text="Текущие заказы"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_client_create_order" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button5"
+        style="@style/ButtonStyle"
+        android:id="@+id/btn_client_contact_us"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="112dp"
@@ -53,16 +57,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_client_current_orders" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView2"
+        style="@style/HeadingStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="112dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="112dp"
-        android:text="Здравствуйте, имя пользователя"
+        android:text="Личный кабинет"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

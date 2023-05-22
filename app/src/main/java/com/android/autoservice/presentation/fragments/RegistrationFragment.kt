@@ -24,9 +24,6 @@ import kotlinx.coroutines.launch
 class RegistrationFragment : Fragment() {
 
     lateinit var viewBinding: FragmentRegistrationBinding
-    private val USER_KEY = "User"
-    private val dataBase = Firebase.database
-    private val fireBaseRef = dataBase.getReference(USER_KEY)
     private val viewModel: RegistrationViewModel by viewModels()
 
     override fun onCreateView(

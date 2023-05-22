@@ -5,7 +5,7 @@ import com.android.autoservice.domain.repository.ServiceRepository
 import javax.inject.Inject
 
 class DeleteServiceUseCase @Inject constructor(private val repository: ServiceRepository) {
-    suspend fun execute(serviceId:Int){
-        repository.deleteService(serviceId)
+    suspend fun execute(id:String){
+        repository.deleteService(id)
     }
 }

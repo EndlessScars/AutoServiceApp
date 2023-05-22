@@ -5,7 +5,7 @@ import com.android.autoservice.domain.repository.ServiceRepository
 import javax.inject.Inject
 
 class GetServiceUseCase @Inject constructor(private val repository: ServiceRepository) {
-    suspend fun execute(serviceId: Int):Service{
+    suspend fun execute(serviceId: String):Service{
         return repository.getService(serviceId)
     }
 }

@@ -5,7 +5,7 @@ import javax.inject.Inject
 
 
 class GetOrderUseCase @Inject constructor(private val repository: OrderRepository) {
-    suspend fun execute(orderId:Int): Order {
-        return repository.getOrder(orderId)
+    suspend fun execute(id:String): Order {
+        return repository.getOrder(id)
     }
 }

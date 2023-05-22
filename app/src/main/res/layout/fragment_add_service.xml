@@ -7,7 +7,7 @@
     tools:context=".presentation.fragments.AddServiceFragment">
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/et_login3"
+        android:id="@+id/et_client_order_description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_login3" />
+        app:layout_constraintTop_toBottomOf="@+id/et_client_order_description" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_auth2"
@@ -48,7 +48,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/btn_create_client_order"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
@@ -60,7 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/et_login4" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/btn_to_client_fragment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
@@ -70,5 +70,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_create_client_order" />
 </androidx.constraintlayout.widget.ConstraintLayout>

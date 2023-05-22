@@ -15,13 +15,10 @@ import javax.inject.Inject
 @HiltViewModel
 class RegistrationViewModel @Inject constructor(
     private val getUserUseCase: GetUserUseCase,
-    private val getUserListUseCase: GetUserListUseCase,
     private val createUserUseCase: CreateUserUseCase,
 ) :
     ViewModel() {
 
-
-    var userMutableLiveData = MutableLiveData<User>()
 
     suspend fun createUser(login: String, user: User) = coroutineScope {
         createUserUseCase.execute(login, user)
